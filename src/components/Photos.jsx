@@ -7,6 +7,7 @@ import { Button, Image } from 'react-bootstrap';
 
 /* Context */
 import Context from '../context';
+import { ContextProvider } from "../context";
 
 const GalleryComponent = () => {
     const key = 'DbVzmApsg0n8PVNbyZnQetcSkfpt4jJOoxFbMik2Xd7L1x4ZVbk8TdRK';    
@@ -47,12 +48,13 @@ const GalleryComponent = () => {
     }, [query, perPage]);
 
     return (
+        <ContextProvider>
         <Gallery photos={pics.map((pic) => ({
             src: pic.src.large,
             width: pic.width,
             height: pic.height,
-            id: pic.id,
-            favorite: favorites && favorites.includes(pic.id),
+            key: pic.id,
+            favorite:  favorites.includes(pic.id),
         }))} 
             renderImage={(props) => {
                 const { favorite, ...imageProps } = props.photo;
@@ -84,6 +86,7 @@ const GalleryComponent = () => {
                 </div>
                 );
             }} />
+            </ContextProvider>
             
             );
     };
