@@ -30,8 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home/>} />      
             <Route path="/favoritos" element={<Favoritos/>} />
-            <Route path="*" element={<NotFound />} />    
-            {favorites}      
+            <Route path="*" element={<NotFound />} />                    
           </Routes>
         </Context.Provider>      
       </BrowserRouter>    

@@ -4,7 +4,6 @@ import {NavbarComp} from '../components/Navbar';
 import {Row, Container, Col} from 'react-bootstrap';
 
 import GalleryComponent from '../components/Photos';
-import Context from '../context';
 
 const Home = () => {
     return (
