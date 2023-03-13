@@ -5,7 +5,7 @@ import { useContext } from 'react';
 
 import Context from '../context';
 
-
+import { Link } from "react-router-dom";
 
 export const NavbarComp = () => {
 
@@ -23,14 +23,16 @@ export const NavbarComp = () => {
                 style={{ maxHeight: '100px' }}
                 navbarScroll
             >
-                <Nav.Link href="/" className="text-light">
-                <h4>Home</h4>
+                <Nav.Link  className="text-light">
+                <Link to="/" style={{ color: '#FFFFFF', textDecoration: 'none' }}><h4>Home</h4></Link>
                 </Nav.Link>
                 <Nav.Link  className="text-light">
                 <h4>|</h4>
                 </Nav.Link>
-                <Nav.Link href="/favoritos" className="text-light">
-                <h4>Favoritos ({favorites.length})</h4>
+                <Nav.Link className="text-light">
+                <Link to="/favoritos" style={{ color: '#FFFFFF', textDecoration: 'none' }}>
+                    <h4>Favoritos ({favorites.length})</h4>
+                </Link>                    
                 </Nav.Link>
             </Nav>
             
