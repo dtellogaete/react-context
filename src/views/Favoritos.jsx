@@ -14,8 +14,8 @@ const Favoritos = () => {
                     <Row>
                         <h1 className="text-center"><b>Mayan Pic</b></h1>  
                     </Row>
-                    <Row>
-                        <GalleryComponentFav/> 
+                    <Row>               
+                        <GalleryComponentFav />                   
                     </Row>                                      
                 </Col>                                   
             </Container>                  

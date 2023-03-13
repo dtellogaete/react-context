@@ -1,7 +1,17 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar , Container, Nav} from 'react-bootstrap';
 
+import { useContext } from 'react';
+
+import Context from '../context';
+
+
+
 export const NavbarComp = () => {
+
+    const { favorites} = useContext(Context);
+    console.log(favorites)
+
     return (
         <>       
         <Navbar bg="success" expand="lg" collapseOnSelect>
@@ -20,7 +30,7 @@ export const NavbarComp = () => {
                 <h4>|</h4>
                 </Nav.Link>
                 <Nav.Link href="/favoritos" className="text-light">
-                <h4>Favoritos</h4>
+                <h4>Favoritos ({favorites.length})</h4>
                 </Nav.Link>
             </Nav>
             

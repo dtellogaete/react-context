@@ -4,6 +4,7 @@ import {NavbarComp} from '../components/Navbar';
 import {Row, Container, Col} from 'react-bootstrap';
 
 import GalleryComponent from '../components/Photos';
+import Context from '../context';
 
 const Home = () => {
     return (
@@ -14,8 +15,8 @@ const Home = () => {
                     <Row>
                         <h1 className="text-center"><b>Mayan Pic</b></h1>  
                     </Row>
-                    <Row>                   
-                        <GalleryComponent />                   
+                    <Row>                                   
+                        <GalleryComponent />                                                         
                     </Row>                                      
                 </Col>                                   
             </Container>                  
